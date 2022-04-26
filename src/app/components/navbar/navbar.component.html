@@ -1,0 +1,5 @@
+<a class="btn" [class]="{'btn-dark':url=='','btn-outline-dark':url!=''}" (click)="goTo('')">Home</a>
+<a class="btn" [class]="{'btn-dark':url=='cat-list','btn-outline-dark':url!='cat-list'}"
+   (click)="goTo('cat-list')">Cats</a>
+<a class="btn" [class]="{'btn-dark':url=='dog-list','btn-outline-dark':url!='dog-list'}"
+   (click)="goTo('dog-list')">Dogs</a>

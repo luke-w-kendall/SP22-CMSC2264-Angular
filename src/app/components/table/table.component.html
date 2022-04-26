@@ -1,0 +1,36 @@
+<table>
+  <thead>
+
+  </thead>
+</table>
+
+
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">{{header.key | titlecase}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of data">
+      <td *ngFor="let header of headers">
+        <div [ngSwitch]="header.type">
+          <div *ngSwitchCase="'color'">
+            <div [style]="'background-color:'+record[header.key]">temp</div>
+          </div>
+          <div *ngSwitchCase="'text'">{{record[header.key]}}</div>
+          <div *ngSwitchCase="'currency'">{{record[header.key]|currency}}</div>
+          <div *ngSwitchCase="'number'">{{record[header.key]}}</div>
+          <div *ngSwitchCase="'date'">{{record[header.key]|date}}</div>
+          <div *ngSwitchCase="'boolean'" class="badge badge-pill"
+               [class]="{'badge-success':record[header.key],'badge-danger':!record[header.key]}">{{record[header.key]}}</div>
+        </div>
+      </td>
+      <!--      <td>{{dog.breed}}</td>-->
+      <!--      <td [style]="'background-color:'+dog.color"></td>-->
+      <!--      <td>{{dog.birthdate |date}}</td>-->
+      <!--      <td>{{dog.weight}}</td>-->
+      <!--      <td>{{dog.price | currency}}</td>-->
+    </tr>
+  </tbody>
+</table>

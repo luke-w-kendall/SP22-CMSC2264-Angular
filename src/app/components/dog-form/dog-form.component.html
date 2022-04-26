@@ -1,0 +1,24 @@
+<div class="dog-form-wrapper">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-6 col-md-2">
+        <input class="form-control" placeholder="Breed" type="text" [(ngModel)]="formData.breed"/>
+      </div>
+      <div class="col-6 col-md-2">
+        <input class="form-control" placeholder="Birthdate" type="date" [(ngModel)]="formData.birthdate"/>
+      </div>
+      <div class="col-6 col-md-2">
+        <input class="form-control" placeholder="Weight" type="number" [(ngModel)]="formData.weight"/>
+      </div>
+      <div class="col-6 col-md-2">
+        <input class="form-control" placeholder="Color" type="color" [(ngModel)]="formData.color"/>
+      </div>
+      <div class="col-6 col-md-2">
+        <input class="form-control" placeholder="Price" type="number" [(ngModel)]="formData.price"/>
+      </div>
+      <div class="col-6 col-md-2">
+        <button class="btn btn-info" (click)="submit()">Add Dog</button>
+      </div>
+    </div>
+  </div>
+</div>

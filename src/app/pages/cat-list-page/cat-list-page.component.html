@@ -1,0 +1,6 @@
+<div class="dog-list-wrapper">
+
+  <app-dog-form (addDog)="cats.push($event)"></app-dog-form>
+
+  <app-table [headers]="headers" [data]="cats"></app-table>
+</div>

@@ -1,0 +1,13 @@
+<h1>Hello and welcome to catdog.com</h1>
+
+
+<span class="display-1" *ngIf="!loading&&data.name;else loadingTemplate">{{data.name}} is {{data.age}} years old</span>
+
+<input [(ngModel)]="name"/>
+<button class="btn btn-success" (click)="submit(name)">Go</button>
+
+
+<ng-template #loadingTemplate>
+  <div class="spinner-border"></div>
+</ng-template>
+
